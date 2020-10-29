@@ -1,16 +1,15 @@
 package com.beginfill.board.domain.posts;
 
-import com.beginfill.board.domain.BaseTimeEntitiy;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
+import com.beginfill.board.domain.BaseTimeEntity;
 import javax.persistence.*;
 
 @Getter
 @NoArgsConstructor
 @Entity
-public class Posts extends BaseTimeEntitiy {
+public class Posts extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
