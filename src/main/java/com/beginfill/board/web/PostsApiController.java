@@ -1,7 +1,9 @@
 package com.beginfill.board.web;
 
 import com.beginfill.board.service.posts.PostsService;
+import com.beginfill.board.web.dto.PostsResponseDto;
 import com.beginfill.board.web.dto.PostsSaveRequestDto;
+import com.beginfill.board.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
