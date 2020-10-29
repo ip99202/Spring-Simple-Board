@@ -1,0 +1,37 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.9.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'java'
+}
+
+group = 'com.beginfill'
+version '1.0.4-SNAPSHOT-'+new Date().format("yyyyMMddHHmmss")
+sourceCompatibility = '1.8'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('org.springframework.boot:spring-boot-starter-mustache')
+	compile('com.h2database:h2')
+
+	compile('org.springframework.boot:spring-boot-starter-oauth2-client')
+	compile('org.springframework.session:spring-session-jdbc')
+
+	compile("org.mariadb.jdbc:mariadb-java-client")
+
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	testCompile("org.springframework.security:spring-security-test")
+}
